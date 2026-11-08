@@ -23,4 +23,10 @@ class ApiEndpoints {
   static const String restrictions = '/restrictions';
   static const String alerts = '/alerts';
   static const String routeCalculate = '/routes/calculate';
+
+  // --- Regulations & Smart Map ---
+  static const String regulationsEvaluate = '/regulations/evaluate';
+  static const String mapRegulations = '/map/regulations';
+  static const String mapLoadingZones = '/map/loading-zones';
+  static const String mapTruckRoutes = '/map/truck-routes';
 }

@@ -76,5 +76,13 @@ class Settings(BaseSettings):
         description="Mapbox public or secret API token for geocoding and routing",
     )
 
+    @property
+    def nyc_open_data_base_url(self) -> str:
+        return self.NYC_OPEN_DATA_BASE_URL
+
+    @property
+    def nyc_open_data_app_token(self) -> str:
+        return self.NYC_OPEN_DATA_APP_TOKEN
+
 
 settings = Settings()
