@@ -1,0 +1,81 @@
+# =========================
+# Smart Truck & Parking Assistant
+# =========================
+
+# ---- Environment & Secrets ----
+.env
+.env.local
+.env.production
+*.pem
+*.key
+*.crt
+secrets/
+
+# ---- Python / Backend ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+venv/
+.venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# ---- Flutter / Dart / Mobile ----
+mobile/.dart_tool/
+mobile/.packages
+mobile/.pub-cache/
+mobile/.pub/
+mobile/build/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/*.iml
+mobile/.metadata
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/ios/Flutter/Flutter.framework
+mobile/ios/Flutter/Flutter.podspec
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/app.flx
+mobile/ios/Flutter/App.framework
+mobile/ios/ServiceDefinitions.json
+mobile/ios/Runner/GeneratedPluginRegistrant.*
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/captures/
+mobile/android/gradlew
+mobile/android/gradlew.bat
+mobile/android/app/src/debug/
+mobile/android/app/src/profile/
+
+# ---- Docker ----
+docker-compose.override.yml
+
+# ---- IDE ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
+logs/
+
+# ---- Database ----
+*.sql.bak
+pgdata/
