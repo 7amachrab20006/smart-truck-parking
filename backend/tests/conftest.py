@@ -95,3 +95,17 @@ def auth_headers(test_user: User) -> dict:
         role=test_user.role.value if hasattr(test_user.role, "value") else str(test_user.role),
     )
     return {"Authorization": f"Bearer {token}"}
+
+
+@pytest_asyncio.fixture(scope="function")
+def driver_auth_token(test_user: User) -> str:
+    """Return a bare JWT access token string for the DRIVER test user.
+
+    Unlike ``auth_headers`` (which returns a full headers dict), this fixture
+    returns just the token so that individual tests can build their own
+    ``Authorization`` header or use the token in other ways.
+    """
+    return create_access_token(
+        subject=str(test_user.id),
+        role=test_user.role.value if hasattr(test_user.role, "value") else str(test_user.role),
+    )
